@@ -4,6 +4,7 @@ namespace App\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use GuzzleHttp\Exception\ClientException;
 
 class Handler extends ExceptionHandler
 {
@@ -46,6 +47,20 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+//        if($exception instanceof ClientException) {
+//            $message = $exception->getResponse()->getBody(true);
+//
+//            return response($message);
+//
+//            $code = $exception->getCode();
+//
+//            return response()->json([
+//                'data' => (object)[],
+//                'message' => $message,
+//                'status_code' => $code
+//            ], $code);
+//        }
+
         return parent::render($request, $exception);
     }
 }
