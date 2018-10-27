@@ -40,3 +40,7 @@ Route::group(['prefix'=>'/blog', 'namespace'=>'Api', 'as'=>'blog.'], function ()
     });
 
 });
+
+Route::group(['prefix'=>'/jobs', 'as'=>'jobs.', 'namespace'=>'Jobs'], function (){
+    Route::get('/', ['uses'=>'JobController@index', 'as'=>'index']);
+});

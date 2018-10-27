@@ -28,8 +28,5 @@ class LoginController extends Controller
         }
 
         return redirect()->route('blog.post.index');
-
     }
-
-
 }

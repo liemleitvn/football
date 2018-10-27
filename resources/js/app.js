@@ -20,3 +20,10 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 const app = new Vue({
     el: '#app'
 });
+
+import GetJob from './components/getJob';
+
+let job = new GetJob();
+
+job.getJob();
+
